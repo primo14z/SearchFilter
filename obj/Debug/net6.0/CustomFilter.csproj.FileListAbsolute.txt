@@ -1,0 +1,15 @@
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.csproj.AssemblyReference.cache
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.AssemblyInfoInputs.cache
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.AssemblyInfo.cs
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.csproj.CoreCompileInputs.cache
+/Users/primozbabic/Documents/CustomFilter/bin/Debug/net6.0/CustomFilter
+/Users/primozbabic/Documents/CustomFilter/bin/Debug/net6.0/CustomFilter.deps.json
+/Users/primozbabic/Documents/CustomFilter/bin/Debug/net6.0/CustomFilter.runtimeconfig.json
+/Users/primozbabic/Documents/CustomFilter/bin/Debug/net6.0/CustomFilter.dll
+/Users/primozbabic/Documents/CustomFilter/bin/Debug/net6.0/CustomFilter.pdb
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.dll
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/refint/CustomFilter.dll
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.pdb
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/CustomFilter.genruntimeconfig.cache
+/Users/primozbabic/Documents/CustomFilter/obj/Debug/net6.0/ref/CustomFilter.dll
