@@ -1,28 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
-namespace CustomFilter
+namespace ExtensionMethods;
+public static class SearchFilter
 {
-    public static class SearchFilter
+    public static IEnumerable<T> Search<T>(List<T> inputs, T searchParam)
     {
-        public static object Search<T>(List<T> inputs, string searchParam)
+        foreach (T input in inputs)
         {
-            foreach (T input in inputs)
+            if (input == null || searchParam == null)
+                continue;
+
+            var props = input.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                          .Where(p => p.PropertyType == searchParam.GetType());
+
+            foreach (var prop in props)
             {
-                var props = input.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                              .Where(p => p.PropertyType == typeof(string));
-
-                foreach (var prop in props)
-                {
-                    if (prop.GetValue(input).Equals(searchParam))
-                        return input;
-                }
+                var pTmp = prop?.GetValue(input);
+                if (pTmp?.Equals(searchParam) == true)
+                    yield return input;
             }
-
-            return null;
         }
     }
 }

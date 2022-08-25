@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CustomFilter
 {
-    public class Person
+    public interface IPerson
     {
         public string Name { get; set; }
         public string LastName { get; set; }

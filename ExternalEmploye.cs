@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace CustomFilter
 {
-    public class Employe : IPerson
+    public class ExternalEmploye : IPerson
     {
-        public string Position { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
-        public int Number { get; set; }
     }
 }

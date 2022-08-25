@@ -1,25 +1,41 @@
-﻿using CustomFilter;
+﻿using ExtensionMethods;
 
-internal class Program
+namespace CustomFilter;
+public static class Program
 {
     private static void Main(string[] args)
     {
-        var persons = new List<Person>()
+        var persons = new List<object>()
         {
-            new Person(){
-                Name = "Janez",
+            new Employe(){
+                Name = "Bepi",
                 LastName = "Novak",
-                Address = "Lj"
+                Address = "Lj",
+                Number = 123
             },
-            new Person()
+            new Employe(){
+                Name = "Juca",
+                LastName = "Novak",
+                Address = "Lj",
+                Number = 456
+            },
+            new ExternalEmploye()
             {
                 Name = "Miha",
+                LastName = "Mihec",
+                Address = "Kp"
+            },
+            new ExternalEmploye()
+            {
+                Name = "Janez",
                 LastName = "Mihec",
                 Address = "Kp"
             }
         };
 
-        System.Console.WriteLine(SearchFilter.Search(persons, "Patrik"));
-
+        foreach (var item in SearchFilter.Search(persons, 456))
+        {
+            Console.WriteLine((item as IPerson).Name);
+        }
     }
 }
