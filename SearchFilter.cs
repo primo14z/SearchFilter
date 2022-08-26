@@ -3,7 +3,7 @@ using System.Reflection;
 namespace ExtensionMethods;
 public static class SearchFilter
 {
-    public static IEnumerable<T> Search<T>(List<T> inputs, T searchParam)
+    public static IEnumerable<T> Search<T, I>(this List<T> inputs, I searchParam)
     {
         foreach (T input in inputs)
         {

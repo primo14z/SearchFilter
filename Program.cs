@@ -5,37 +5,17 @@ public static class Program
 {
     private static void Main(string[] args)
     {
-        var persons = new List<object>()
+        var persons = new List<IPerson>()
         {
-            new Employe(){
-                Name = "Bepi",
-                LastName = "Novak",
-                Address = "Lj",
-                Number = 123
-            },
-            new Employe(){
-                Name = "Juca",
-                LastName = "Novak",
-                Address = "Lj",
-                Number = 456
-            },
-            new ExternalEmploye()
-            {
-                Name = "Miha",
-                LastName = "Mihec",
-                Address = "Kp"
-            },
-            new ExternalEmploye()
-            {
-                Name = "Janez",
-                LastName = "Mihec",
-                Address = "Kp"
-            }
+            new Employee("CTO", "Bepi", "Novak", "Lj", 123),
+            new Employee("CEO", "Juca", "Novak", "Lj", 456),
+            new ExternalEmployee("Miha", "Mihec", "Kp"),
+            new ExternalEmployee("Janez", "Mihec", "Kp")
         };
 
-        foreach (var item in SearchFilter.Search(persons, 456))
+        foreach (var item in persons.Search(456))
         {
-            Console.WriteLine((item as IPerson).Name);
+            Console.WriteLine((item as IPerson)?.Name);
         }
     }
 }
