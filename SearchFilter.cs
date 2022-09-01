@@ -16,8 +16,21 @@ public static class SearchFilter
             foreach (var prop in props)
             {
                 var pTmp = prop?.GetValue(input);
-                if (pTmp?.Equals(searchParam) == true)
-                    yield return input;
+
+                if (pTmp != null)
+                {
+                    if (pTmp.GetType() == typeof(string))
+                    {
+                        string stringParam = searchParam as string ?? "";
+                        if (!stringParam.Equals(string.Empty) && ((string)pTmp).Contains(stringParam))
+                            yield return input;
+                    }
+                    else
+                    {
+                        if (pTmp.Equals(searchParam))
+                            yield return input;
+                    }
+                }
             }
         }
     }

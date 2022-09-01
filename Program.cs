@@ -13,9 +13,9 @@ public static class Program
             new ExternalEmployee("Janez", "Mihec", "Kp")
         };
 
-        foreach (var item in persons.Search(456))
+        foreach (var item in persons.Search("Mi"))
         {
-            Console.WriteLine((item as IPerson)?.Name);
+            Console.WriteLine(item?.Name);
         }
     }
 }
